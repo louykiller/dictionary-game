@@ -1,0 +1,48 @@
+body {
+    background-color: darkslategray;
+}
+
+a {
+    padding: 5px;
+    background-color:rgb(45, 110, 213);
+    color:beige;
+    outline: 1px solid black;
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+    font-size: larger;
+}       
+
+input {
+    font-size: larger;
+}
+
+p {
+    margin: 4px;
+    font-size: large;
+}
+
+h1{
+    margin: 10px;
+}
+
+div {
+    align-self: center;
+    background-color: white;
+    padding: 15px;
+    margin: auto;
+    margin-top: 15px;
+    width: 95%;
+    height: fit-content;
+    outline: 3px solid black;
+}
+
+header {
+    background-color: white;
+    padding: 15px;
+    margin: auto;
+    margin-top: 30px;
+    width: 95%;
+    outline: 3px solid black;
+    text-align: center;
+}
