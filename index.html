@@ -13,6 +13,18 @@
                 <p>3º You only have 3 lives! If you write an invalid or non-existent word you loose a life</p>
                 <h4>Good luck!</h4>
                 
-            </div> 
+            </div>   
+           <form id = "baseWord"
+                 method = "POST"
+                 action = "dictGame.php">
+               <div>
+                   <input name = "baseWord">
+                   <input placeholder = "Base Word">
+               </div>
+               <button name= "submit"  value = "Send" type = "submit">
+                   Choose Word
+               </button>
+
+           </form>
     </body>
 </html>
