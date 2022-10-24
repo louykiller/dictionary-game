@@ -7,19 +7,37 @@
     </head>
     <body>
         <header>
-            <a href="index.html" style="float: left;">Go Back</a>
-            <h1>Dictionary Game English version</h1>
+            <a href="index.html" style="float: left; position: relative; top:6px; outline:white;"> <- <u>Go Back</u></a>
+            <h3 style = "float:right; position: relative; top:40px; color:rgb(207, 105, 33)">Base Word</h2>
+            <h1 class = "center" style="color:rgb(244, 105, 54); font-family:fantasy; font-size:70px;">Dictionary Game</h1>
+            <h3 class = "center;" style="color:steelblue">Lives: 3</h3> 
+            <h3 style="float: left;" class="gameOver">GAME OVER</h3>
+            <h3 style="float: right;" class="gameOver">GAME OVER</h3>
             <p style="float: right;" id="count"></p>
-        </header>
-        <div>
-            <h3>Lives: 3</h3>
-            <input type="text" id="baseWord" placeholder="Base Word"/>
-            <input type="button" value="Choose Word" onclick="lockBaseWord();" id="locker"/> 
-            <a href="teste.php">Teste</a>
+            <input type= "text" id = "guess" style ="float:center; position: relative; left:-20px" placeholder = "Guess">
+            <button class=check id = "check">Check</button>
+            <br><br><br>
+            <a class= playAgain href = "index.html">Play Again</a>
             <br><br>
-            <input type="text" id="guess" placeholder="Your guess" style="visibility: hidden;">
-            <a onclick="validateWord()" id="try" style="visibility: hidden;">Try</a>
-        </div>
-        <script src="gameLogic.js"></script>
+        </header> 
+        <br>
+        <fieldset style="margin-left: 1%;">
+            <legend style="color: rgb(7, 242, 7);">Correct Guesses</legend>
+            <ul>
+                <li></li>
+            </ul>
+        </fieldset>
+
+        <fieldset style="margin-right: -1.5%;" >
+            <legend style="color: red;">Wrong Guesses</legend>
+            <ul>
+                <li></li>
+            </ul>
+        </fieldset>
+        
+        <center>
+            <button id="showAll" class="showAll">Show All Words</button>
+        </center>
+       
     </body>
 </html>
