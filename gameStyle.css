@@ -1,16 +1,23 @@
 body {
-    background-color: darkslategray;
+    background-color: rgb(3, 80, 139);
 }
 
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 a {
     padding: 5px;
-    background-color:rgb(45, 110, 213);
-    color:beige;
-    outline: 1px solid black;
+    background-color:rgb(251, 255, 255);
+    color:rgb(20, 156, 209);
+    outline: 1px solid rgb(2, 63, 99);
     text-decoration: none;
     width: fit-content;
     height: fit-content;
     font-size: larger;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+    border-radius: 5%;
+    
 }       
 
 input {
@@ -30,11 +37,36 @@ div {
     align-self: center;
     background-color: white;
     padding: 15px;
-    margin: auto;
     margin-top: 15px;
-    width: 95%;
+    width: 46.2%;
     height: fit-content;
     outline: 3px solid black;
+    text-align: center;
+    display: inline-block;
+    
+}
+
+fieldset{
+    align-self: center;
+    background-color:white;
+    padding: 15px;
+    margin-top: 15px;
+    width: 46.2%;
+    height: fit-content;
+    outline: px solid black;
+    text-align: center;
+    display: inline-block;
+    border-color: black;
+    border-width: 3px;
+    
+}
+
+legend{
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+    border-width: 2px;
+    font-weight: bold;
 }
 
 header {
@@ -46,3 +78,57 @@ header {
     outline: 3px solid black;
     text-align: center;
 }
+
+.gameOver {
+    visibility: hidden; 
+    color:red;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size:xx-large;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+
+  li{
+    float:left;
+    color: black;
+    font-family:'Courier New', Courier, monospace;
+  }
+
+  .showAll{
+    width: 30%;
+    padding: 15px;
+    font-size: large;
+    font-family:monospace;
+    font-weight: bold;
+    border-color:chocolate;
+    color:white;
+    border-width: 3px;
+    background-color: coral;
+    visibility:visible;
+  }
+
+  .goBack{
+    float: left; 
+    position: relative; 
+    top:6px; 
+    outline:white;
+  }
+
+ #check{
+    outline: 3px solid steelblue; 
+    background-color:rgb(247, 248, 248); 
+    font-weight: bold; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+.playAgain{
+    visibility: hidden;
+    outline: 3px solid rgb(212, 61, 6); 
+    background-color:rgb(239, 108, 15); 
+    color: white; 
+}
+  
