@@ -2,7 +2,7 @@
 Vamos focar-nos apenas na versão inglesa, ou seja, o index.html e o dictGame.php e os respetivos style sheets indexStyle.css e gameStyle.css
 
 index.html: 
-- Debaixo das regras adicionar um form com um input de texto com id="baseWord" e o placeholder="Base Word" e um botão de submit com id="submit" a dizer "Choose Word"
+- Debaixo das regras adicionar um form do tipo POST com um input de texto com id="baseWord" e o placeholder="Base Word" e um botão de submit com id="submit" a dizer "Choose Word"
 
 dictGame.php: 
 - Mudar o elemento < h3 > das vidas "Lives: 3" do < div > para o < header > para estar ao lado direito do titulo "Dictionary Game English version"
