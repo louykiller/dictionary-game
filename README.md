@@ -23,6 +23,8 @@ dictGame.php:
 (Isto é debaixo de todos os elementos)
 - Adicionar um botão oculto com id="showAll" a dizer "Show all words"
 
+Todos os elementos que não estão escritos aqui podem ser tirados
+
 
 # Game Rules
 1º Choose a base word with a minimum of 4 letters
