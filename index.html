@@ -6,27 +6,39 @@
         <link rel="stylesheet" href="indexStyle.css">
     </head>
     <body>
-            <div>
-                <h1>Game Rules</h1>
-                <p>1º Choose a base word</p>
-                <p>2º Try to guess as many words as possible that can be written with the letters of the base word</p>
-                <p>3º You only have 3 lives! If you write an invalid or non-existent word you loose a life</p>
-                <h4>Good luck!</h4>
-            </div> 
-            <form id = "baseWord"
-                  method = "POST"
-                  action = "dictGame.php">
-                <div>
-                   
-                    <input name = "baseWord" placeholder = "Base Word" type = "text">
-                <br>
-                <button name= "submit"  value = "Send" type = "submit">
-                    Choose Word
-                </button>
-            </div>
- 
+        <div>
+            <h1>Game Rules</h1>
+            <p>1º Choose a base word with at least 4 letters</p>
+            <p>2º Try to guess as many words as possible that can be written with the letters of the base word</p>
+            <p>3º You only have 3 lives! If you write an invalid or non-existent word you loose a life</p>
+            <h4>Good luck!</h4>
+        </div> 
+        <div>
+            <script>
+                function checkIt(){
+                    let word = document.getElementById('baseWord').value;
+                    // the word needs to be at least 4 letters long
+                    if (word.length < 4){
+                        alert("Your word needs to be at least 4 letters long");
+                        return false;  
+                    } 
+                    // and it can only contain letters
+                    for(let i = 0; i < word.length; i++){
+                        if(!((word[i] >= "a" && word[i] <= "z") || (word[i] >= "A" && word[i] <= "Z"))){
+                            alert("Your word can only contain letters");
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+            </script>
+            <form method = "POST"
+                action="dictGame.php"
+                onsubmit="return checkIt();">
+                <input id="baseWord" name="baseWord" placeholder = "Base Word" type = "text">
+                <br><br>
+                <input name= "submit"  value = "Choose Word" type = "submit">
             </form>
-                
-            </div> 
+        </div>
     </body>
 </html>

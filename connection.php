@@ -3,7 +3,7 @@
 include 'functions.php';
 
 // Returns an array with all of the valid words that were passed as the argument
-function getValidWords(array $originalLetterArray, array $wordsToCheck): array{
+function getValidWords($originalLetterArray, $wordsToCheck){
     $validWords = [];
     // Iterates throuh all the words to check. If they are valid add them to the array
     foreach($wordsToCheck as $word){
@@ -15,7 +15,7 @@ function getValidWords(array $originalLetterArray, array $wordsToCheck): array{
 }
 
 // Function that returns the words from the database that match the search
-function getWords(int $len, array $originalLetterArray): array{
+function getWords($len, $originalLetterArray){
     $words = [];
     // Iterate through all the letters
     foreach($originalLetterArray as $letter => $num){
@@ -44,7 +44,7 @@ if(isset($_POST['submit'])){
     // Start the connection
     $con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
     if(!$con){
-        die("Failed to connect do database");
+        echo "<h1>Failed to connect do database</h1>";
     }
     // Get base word
     $baseWord = lowerCase($_POST['baseWord']);

@@ -1,3 +1,6 @@
+<?php
+    include 'connection.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,7 +11,7 @@
     <body>
         <header>
             <a href="index.html" style="float: left; position: relative; top:6px; outline:white;"> <- <u>Go Back</u></a>
-            <h3 style = "float:right; position: relative; top:40px; color:rgb(207, 105, 33)">Base Word</h2>
+            <h3 style = "float:right; position: relative; top:40px; color:rgb(207, 105, 33)">Base Word: <?= lowerCase($_POST['baseWord']); ?></h2>
             <h1 class = "center" style="color:rgb(244, 105, 54); font-family:fantasy; font-size:70px;">Dictionary Game</h1>
             <h3 class = "center;" style="color:steelblue">Lives: 3</h3> 
             <h3 style="float: left;" class="gameOver">GAME OVER</h3>
@@ -17,7 +20,7 @@
             <input type= "text" id = "guess" style ="float:center; position: relative; left:-20px" placeholder = "Guess">
             <button class=check id = "check">Check</button>
             <br><br><br>
-            <a class= playAgain href = "index.html">Play Again</a>
+            <a class="gameOver" href = "index.html">Play Again</a>
             <br><br>
         </header> 
         <br>
@@ -36,7 +39,7 @@
         </fieldset>
         
         <center>
-            <button id="showAll" class="showAll">Show All Words</button>
+            <button id="showAll" class="gameOver">Show All Words</button>
         </center>
        
     </body>

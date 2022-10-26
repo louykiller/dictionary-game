@@ -1,12 +1,12 @@
 <?php
 
 // Simple function to put the word to lower case
-function lowerCase(string $word): string{
+function lowerCase($word){
     return strtolower($word);
 }
 
 // Function that as a word as an argument and returns an array with it's letter's and number of ocorrences
-function getLetterArray(string $word): array{
+function getLetterArray($word){
     $letterArray = [];
     // Iterate through the word
     for($i = 0, $len = strlen($word); $i < $len; $i++){
@@ -23,7 +23,7 @@ function getLetterArray(string $word): array{
 }
 
 // Returns true if the word is valid, false if not
-function checkIfValid(string $wordToCheck, array $originalLetterArray): bool{
+function checkIfValid($wordToCheck, $originalLetterArray){
     // get the letter Array for the word to check
     $letterArrayToCheck = getLetterArray($wordToCheck);
     foreach($letterArrayToCheck as $letter => $num){
