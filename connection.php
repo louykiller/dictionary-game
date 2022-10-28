@@ -1,18 +1,6 @@
 <?php
 
-include 'functions.php';
-
-// Returns an array with all of the valid words that were passed as the argument
-function getValidWords($originalLetterArray, $wordsToCheck){
-    $validWords = [];
-    // Iterates throuh all the words to check. If they are valid add them to the array
-    foreach($wordsToCheck as $word){
-        if(checkIfValid($word, $originalLetterArray)){
-            $validWords[] = $word;
-        }
-    }
-    return $validWords;
-}
+include_once 'functions.php';
 
 // Function that returns the words from the database that match the search
 function getWords($len, $originalLetterArray){
@@ -20,7 +8,7 @@ function getWords($len, $originalLetterArray){
     // Iterate through all the letters
     foreach($originalLetterArray as $letter => $num){
         // Select all the words that start with each letter and have lenght <= $len (length of the base word)
-        $query = "SELECT word FROM dictENG WHERE word LIKE '$letter%' AND LENGTH(word) <= $len";
+        $query = "SELECT word FROM dictENG WHERE word LIKE '$letter%' AND LENGTH(word) > 1 AND LENGTH(word) <= $len ORDER BY word ASC" ;
         $result = mysqli_query($GLOBALS['con'], $query);
         // If it got results then add them to the array
         if($result && mysqli_num_rows($result) > 0){
@@ -30,7 +18,14 @@ function getWords($len, $originalLetterArray){
             echo 'Error fetching words';
         }
     }
-    return $words;
+    // Put all the results in a single array
+    $wordsFound = [];
+    foreach($words as $array){
+        foreach($array as $arr){
+            $wordsFound[] = $arr['word'];
+        }
+    }
+    return $wordsFound;
 }
 
 // Credentials for the database
@@ -48,12 +43,14 @@ if(isset($_POST['submit'])){
     }
     // Get base word
     $baseWord = lowerCase($_POST['baseWord']);
-    // Get it's array of letters
+    $baseWordArray[] = $baseWord;
+    // Get it's array of letters and sort it
     $originalLetterArray = getLetterArray($baseWord);
+    ksort($originalLetterArray);
     // Get all the words that start with those letters
-    $words = getWords(strlen($baseWord), $originalLetterArray);
+    $wordsFound = getWords(strlen($baseWord), $originalLetterArray);
     // Check the valid words
-    $validWords = getValidWords($originalLetterArray, $words);
+    $validWords = getValidWords($originalLetterArray, $wordsFound);
     // Close the connection
     mysqli_close($con);
 }

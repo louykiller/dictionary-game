@@ -36,5 +36,15 @@ function checkIfValid($wordToCheck, $originalLetterArray){
     return true;
 }
 
-
+// Returns an array with all of the valid words that were passed as the argument
+function getValidWords($originalLetterArray, $wordsToCheck){
+    $validWords = [];
+    // Iterates throuh all the words to check. If they are valid add them to the array
+    foreach($wordsToCheck as $word){
+        if(checkIfValid($word, $originalLetterArray)){
+            $validWords[] = $word;
+        }
+    }
+    return $validWords;
+}
 
