@@ -1,31 +1,3 @@
-# TODO
-Vamos focar-nos apenas na versão inglesa, ou seja, o index.html e o dictGame.php e os respetivos style sheets indexStyle.css e gameStyle.css
-
-index.html: 
-- Debaixo das regras adicionar um form com method="POST" e action="dictGame.php" com um input de texto com name="baseWord" e o placeholder="Base Word" e um botão de submit com name="submit" e value="Submit" a dizer "Choose Word"
-
-dictGame.php: 
-- Mudar o elemento < h3 > das vidas "Lives: 3" do < div > para o < header > para estar ao lado direito do titulo "Dictionary Game English version"
-
-(Isto é tudo ao mesmo nivel)
-- No div por um input do tipo texto com id="guess" com o placeholder="Guess"
-- Adicionar ao lado do input colocar um botão com id="check" a dizer "Check"
-- Adicionar ainda uma legenda vazia encostada ao lado direito com id="baseWord"
-
-(Isto é tudo ao mesmo nivel, debaixo dos elementos anteriores)
-- Adicionar uma legenda oculta (visibility="hidden" penso eu) com id="gameOverL" a dizer "Game Over" encostado à esquerda e outra com id="gameOverR" a dizer "Game Over" encostada à direita
-- Adicionar um < a > oculto a dizer "Play Again" que nos leva à pagina principal quando clicado (index.html) no centro
- 
-(Isto pode no mesmo < div > ou em 2 separados, debaixo dos elementos anteriores) 
-- Do lado direito colocar uma legenda a dizer "Correct Guesses", do lado esquerdo "Wrong Guesses"
-- Colocar 2 lista não ordenadas < ul > por baixo de cada legenda
-  
-(Isto é debaixo de todos os elementos)
-- Adicionar um botão oculto com id="showAll" a dizer "Show all words"
-
-Todos os elementos que não estão escritos aqui podem ser tirados
-
-
 # Game Rules
 1º Choose a base word with a minimum of 4 letters
 
@@ -45,3 +17,10 @@ The game can be played in both english and portuguese.
 
 The structure of the web page is the same for the 2 languages but the database for the words is (obviously) different.
 
+# TODO
+- Make the UI better (create an event listener to check the word after pressing Enter, make the guesses list more robust, try to make the website phone friendly)
+- Organize the code better
+- Portuguese Version
+
+# More Ideas
+- Add a sugestion feature, where if a player makes a guess that's not in the valid words list, and would be correct with the current base word, the player can sugest a new word along with an example of the word (Example: Word - lol, example - acronym for laughing out loud (LOL))
