@@ -13,9 +13,9 @@ Correct Guesses: part, net, pet, tap
 Wrong Guesses: partner (the base word only has 1 letter 'r' and not 2), dog (the base word has none of those letters), tnerap (word doesn't exist)
 
 # Language
-The game can be played in both english and portuguese. 
+The game can only be played in english for now. Portuguese will be added later. 
 
-The structure of the web page is the same for the 2 languages but the database for the words is (obviously) different.
+The structure of the web page will be the same for the 2 languages but the database for the words is (obviously) different.
 
 # TODO
 - Make the UI better (create an event listener to check the word after pressing Enter, make the guesses list more robust, try to make the website phone friendly)
@@ -23,4 +23,4 @@ The structure of the web page is the same for the 2 languages but the database f
 - Portuguese Version
 
 # More Ideas
-- Add a sugestion feature, where if a player makes a guess that's not in the valid words list, and would be correct with the current base word, the player can sugest a new word along with an example of the word (Example: Word - lol, example - acronym for laughing out loud (LOL))
+- Add a sugestion feature, where if a player makes a guess that's not in the valid words list, and would be correct with the current base word, the player can sugest a new word along with an example of the word (e.g Word - lol, example - acronym for laughing out loud (LOL))
